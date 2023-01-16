@@ -136,6 +136,10 @@ fun EditarBody() {
                 "toxico" to checked,
                 "estado" to estado
             ))
+            name=""
+            categoria=""
+            checked=false
+            estado=""
         }
     }
 }
