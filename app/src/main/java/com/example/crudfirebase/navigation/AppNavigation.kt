@@ -14,7 +14,7 @@ fun AppNavigation() {
     NavHost(navController = navigationController, startDestination = AppScreens.Inicio.ruta)
 
     {
-        composable(AppScreens.MenuInicio.ruta) { MenuInicio(navigationController) }
+      
         composable(AppScreens.Anadir.ruta) { Anadir(navigationController) }
         composable(AppScreens.InformeGeneral.ruta) { InformeGeneral(navigationController) }
         composable(AppScreens.Editar.ruta) { Editar(navigationController) }

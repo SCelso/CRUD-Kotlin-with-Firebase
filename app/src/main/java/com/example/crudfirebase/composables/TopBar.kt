@@ -16,9 +16,9 @@ import androidx.navigation.NavController
 
 @Composable
 fun Title(title: String, navController: NavController, backbutton: Boolean = true) {
-    TopAppBar (
-            backgroundColor = MaterialTheme.colors.primary
-            ) {
+    TopAppBar(
+        backgroundColor = MaterialTheme.colors.primary
+    ) {
 
         if (backbutton) {
             Icon(

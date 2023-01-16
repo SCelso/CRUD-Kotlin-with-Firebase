@@ -28,11 +28,11 @@ fun ButtonDefault(text: String, onClick: () -> Unit) {
 }
 
 @Composable
-fun ButtonIcon(icon: ImageVector, onClick: () -> Unit){
+fun ButtonIcon(icon: ImageVector, onClick: () -> Unit) {
     Button(
         onClick = onClick, modifier = Modifier.size(48.dp),
         colors = ButtonDefaults.textButtonColors()
     ) {
-       Icon(imageVector = icon,contentDescription = "")
+        Icon(imageVector = icon, contentDescription = "")
     }
 }

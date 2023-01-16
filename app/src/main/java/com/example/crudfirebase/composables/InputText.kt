@@ -15,7 +15,7 @@ fun TextInput(
     onValueChange: (String) -> Unit,
     label: String,
 
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
 
 
@@ -33,6 +33,7 @@ fun TextInput(
 
     )
 }
+
 @Composable
 fun InputLabel(text: String/* imageVector: ImageVector*/) {
     Row {

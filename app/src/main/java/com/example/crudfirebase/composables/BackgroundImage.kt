@@ -8,10 +8,10 @@ import androidx.compose.ui.res.painterResource
 import com.example.crudfirebase.R
 
 @Composable
-fun BackgroundImage(){
+fun BackgroundImage() {
     Image(
         painter = painterResource(id = R.drawable.farmacia_1),
-        contentDescription =  "logo_farmacia",
+        contentDescription = "logo_farmacia",
         modifier = Modifier
             .fillMaxSize())
 }

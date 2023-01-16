@@ -4,7 +4,7 @@ data class ExpandableCardItem(
     val id: String,
     val nombre: String,
     val categoria: String,
-    val detalles: ItemDetail
+    val detalles: ItemDetail,
 ) {
-    data class ItemDetail(val toxico: Boolean, val estado:String)
+    data class ItemDetail(val toxico: Boolean, val estado: String)
 }
