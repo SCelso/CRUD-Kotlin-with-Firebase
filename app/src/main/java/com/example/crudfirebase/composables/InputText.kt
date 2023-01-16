@@ -24,11 +24,7 @@ fun TextInput(
         onValueChange = onValueChange,
         label = { InputLabel(text = label) },
         singleLine = true,
-        /*CAMBIAR  COLORES*/
-        colors = TextFieldDefaults.outlinedTextFieldColors(
-            focusedBorderColor = MaterialTheme.colors.secondary,
-            unfocusedBorderColor = MaterialTheme.colors.primary,
-        ),
+
         modifier = modifier.width(350.dp)
 
     )

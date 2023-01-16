@@ -37,7 +37,7 @@ fun ExpandableCardRow(
                     .fillMaxWidth()
                     .padding(16.dp)
             ) {
-                Row() {
+
                     Column {
                         Text(text = expandableCardItem.nombre, style = MaterialTheme.typography.h6)
                         Text(
@@ -45,21 +45,21 @@ fun ExpandableCardRow(
                             style = MaterialTheme.typography.body1
                         )
                     }
-                    Spacer(modifier = Modifier.width(90.dp))
+                Row(horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth()) {
                     ButtonIcon(icon = Icons.Default.Build, onClick = editOnClick)
                     Spacer(modifier = Modifier.width(16.dp))
                     ButtonIcon(icon = Icons.Default.Delete, onClick =deleteOnClick )
+                    Spacer(modifier = Modifier.width(16.dp))
+                    ExpandableCardIcon(
+                        expanded = expanded,
+                        onIconClick = { expanded = !expanded },
+                    )
+
                 }
 
 
 
-                ExpandableCardIcon(
-                    expanded = expanded,
-                    onIconClick = { expanded = !expanded },
-                    modifier = Modifier.align(
-                        Alignment.CenterEnd
-                    )
-                )
+
             }
 
             if (expanded)
@@ -95,9 +95,9 @@ fun ExpandableCardIcon(
 
     expanded: Boolean,
     onIconClick: () -> Unit,
-    modifier: Modifier
+
 ) {
-    IconButton(onClick = onIconClick, modifier = modifier) {
+    IconButton(onClick = onIconClick) {
         Icon(
             Icons.Filled.KeyboardArrowDown,
             "Icono para expandir tarjeta",
@@ -110,16 +110,3 @@ fun ExpandableCardIcon(
         )
     }
 }
-/*@Preview
-@Composable
-fun CardPreview(){
-    Box(modifier = Modifier
-        .width(1080.dp)
-        .height(1920.dp)){
-
-        val expandableCardItem = ExpandableCardItem("ibuprofeno","analgesico",ExpandableCardItem.ItemDetail(false,"solido"))
-        ExpandableCardRow(expandableCardItem)
-        
-    }*/
-    
-//}/**/

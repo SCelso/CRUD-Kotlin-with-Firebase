@@ -95,6 +95,7 @@ fun AnadirBody() {
             modifier = Modifier
                 .fillMaxWidth()
                 .onGloballyPositioned { coordinates -> textSize = coordinates.size.toSize() },
+
             label = { Text("Categoria") },
             trailingIcon = {
                 Icon(icon, "contentDescription",
@@ -136,6 +137,11 @@ fun AnadirBody() {
             )
             Log.i("HashMap", data.toString())
             db.collection("farmacos").document(name).set(data, SetOptions.merge())
+
+            name=""
+            categoria=""
+            checked=false
+            estado=""
         }
     }
 }
